@@ -3,98 +3,137 @@
     <div class="border-2 border-gray-300">
       <div class="flex space-x-3 container mx-auto">
         <div class="float-left ...">
-          Đồ chơi
+          <!-- Đồ chơi -->
+          <NuxtLink to="#">
+            Đồ chơi
+          </NuxtLink>
         </div>
         <div class="float-left px-8...">
-          Hoa Giấy
+          <NuxtLink to="#">
+            Hoa Giấy
+          </NuxtLink>
         </div>
         <div class="float-left px-8...">
-          Tái chế
+          <NuxtLink to="#">
+            Tái chế
+          </NuxtLink>
         </div>
         <div class="float-left px-8...">
-          Trang Trí
+          <NuxtLink to="#">
+            Trang Trí
+          </NuxtLink>
         </div>
       </div>
     </div>
     <div class="container mx-auto my-8" style="max-width: 500px">
-      <div class="object-contain">
+      <NuxtLink class="object-contain" to="#">
         <img
           :src="require('../assets/img/logo-cachlamhay-final-tiny.png')"
-          alt="font_image"
         >
-      </div>
+      </NuxtLink>
     </div>
     <div class="border-2 border-gray-300">
       <div class="flex space-x-3 container mx-auto">
         <div class="float-left ...">
-          Đồ chơi
+          <NuxtLink to="#">
+            Đồ chơi
+          </NuxtLink>
         </div>
         <div class="float-left px-8...">
-          Hoa Giấy
+          <NuxtLink to="#">
+            Hoa Giấy
+          </NuxtLink>
         </div>
         <div class="float-left px-8...">
-          Tái chế
+          <NuxtLink to="#">
+            Tái chế
+          </NuxtLink>
         </div>
         <div class="float-left px-8...">
-          Trang Trí
+          <NuxtLink to="#">
+            Trang Trí
+          </NuxtLink>
         </div>
       </div>
     </div>
     <div class="container mx-auto my-10">
       <div class="flex space-x-4 ..." style="height: 250px">
-        <div class="flex-1">
+        <NuxtLink class="flex-1" to="#">
           <img
             :src="require(`~/assets/img/${images_label.first.img}.jpg`)"
             style="height: 250px;width: 100%"
           >
-        </div>
-        <div class="flex-1">
+        </NuxtLink>
+        <NuxtLink class="flex-1" to="#">
           <img
             :src="require(`~/assets/img/${images_label.second.img}.jpg`)"
             style="height: 250px;width: 100%"
           >
-        </div>
-        <div class="flex-1">
+        </NuxtLink>
+        <NuxtLink class="flex-1" to="#">
           <img
             :src="require(`~/assets/img/${images_label.thirst.img}.jpg`)"
             style="height: 250px;width: 100%"
           >
-        </div>
+        </NuxtLink>
       </div>
     </div>
     <div class="container mx-auto my-10">
       <div class="grid grid-cols-3 gap-4">
         <div class="col-span-2 ... ">
-          <h1 style="font-size: 25px"><b><u>Mới nhất</u></b></h1>
+          <h1 style="font-size: 25px">
+            <b><u>Mới nhất</u></b>
+          </h1>
           <br>
-          <div v-for="img_label in images_label" :key="img_label.label" class="mb-4" style="height: 150px, display: blockl; font-size: 1vw">
+          <NuxtLink v-for="img_label in images_label" :key="img_label.label" class="mb-4" style="height: 150px, display: blockl; font-size: 1vw" to="#">
             <div class="grid grid-cols-3 gap-4">
               <div class="... object-contain">
                 <!-- <div class="... object-contain" :style="{ backgroundImage: `url(_nuxt/assets/img/${img_label.img}.jpg)`}"> -->
                 <img :src="require(`~/assets/img/${img_label.img}.jpg`)" style="max-height: 150px; width: 100%">
               </div>
               <div class="col-span-2 ... ">
-                <h3 class="mb-4" style="font-size: 20px"> <b>{{ img_label.title }}</b></h3>
-                <p class="mb-4"> {{ img_label.type }} - {{ img_label.library }} - {{ img_label.time }}</p>
-                <p class="mb-4" >{{ img_label.infor }}</p>
+                <h3 class="mb-4" style="font-size: 20px">
+                  <NuxtLink to="#">
+                    <b>{{ img_label.title }}</b>
+                  </NuxtLink>
+                </h3>
+                <p class="mb-4">
+                  {{ img_label.type }} - {{ img_label.library }} - {{ img_label.time }}
+                </p>
+                <p class="mb-4">
+                  {{ img_label.infor }}
+                </p>
               </div>
             </div>
-          </div>
+          </NuxtLink>
         </div>
         <div class=" ... mb-4">
-          <h1 style="font-size: 25px"><b><u>Theo dõi chúng tôi</u></b></h1>
+          <h1 style="font-size: 25px">
+            <b><u>Theo dõi chúng tôi</u></b>
+          </h1>
           <br>
           <div class="... mt-4">
             <div class="grid grid-cols-3 gap-4">
-              <div class="...">
-                <button id="buttonSocialFacebook" style="height: 120px; width: 120px; font-size: 20px"><i class="fab fa-facebook-f"></i><p>12,050</p><p style="font-size: 15px">Thành viên</p></button>
-              </div>
-              <div class="...">
-                <button id="buttonSocialYoutube" style="height: 120px; width: 120px; font-size: 20px"><i class="fab fa-youtube"></i><p>2362</p><p style="font-size: 15px">Người theo dõi</p></button>
-              </div>
+              <NuxtLink class="..." to="#">
+                <button id="buttonSocialFacebook" style="height: 120px; width: 120px; font-size: 20px">
+                  <i class="fab fa-facebook-f" /> <p>12,050</p><p style="font-size: 15px">
+                    Thành viên
+                  </p>
+                </button>
+              </NuxtLink>
+              <NuxtLink class="..." to="#">
+                <button id="buttonSocialYoutube" style="height: 120px; width: 120px; font-size: 20px">
+                  <i class="fab fa-youtube" /><p>2362</p>
+                  <p style="font-size: 15px">
+                    Người theo dõi
+                  </p>
+                </button>
+              </NuxtLink>
             </div>
           </div>
-          <h1 style="font-size: 25px"><b><u>Theo dõi chúng tôi</u></b></h1>
+          <h1 style="font-size: 25px">
+            <b><u>Theo dõi chúng tôi</u></b>
+          </h1>
           <div class="... mb-4 bg-gray-100">
             <div v-for="img_label in images_label" :key="img_label.label" class="my-8" style="heigh: 250px">
               <div v-if="img_label.id <= 5" class="grid grid-cols-3 gap-4">
@@ -109,15 +148,19 @@
               </div>
             </div>
           </div>
-          <h1 style="font-size: 25px"><b><u>Theo dõi chúng tôi</u></b></h1>
-          <div v-for="sidetag in sidetags" :key="sidetag.label">
+          <h1 style="font-size: 25px">
+            <b><u>Theo dõi chúng tôi</u></b>
+          </h1>
+          <NuxtLink v-for="sidetag in sidetags" :key="sidetag.label" to="">
             <div class="... mb-4 bg-red-300" :style="{ backgroundImage: `url(_nuxt/assets/img/${sidetag.img}.jpg)`}">
               <!-- <img :src="require(`~/assets/img/${sidetag.img}.jpg`)" style="max-height: 270px;width: 100%; z-index: -1"> -->
               <div style="height: 270px;width: 100%; display: block;" class="container">
-                <p style="position: relative; top: 50%; pading: auto; text-size: 20px"> {{sidetag.infor}} </p>
+                <p style="position: relative; top: 50%; pading: auto; text-size: 15px">
+                  {{ sidetag.infor }}
+                </p>
               </div>
             </div>
-          </div>
+          </NuxtLink>
         </div>
       </div>
     </div>
@@ -221,7 +264,7 @@ export default {
           id: 2,
           img: 'background2',
           label: 'First label',
-          infor: 'Top 5 món quà tặng bạn gái cực kỳ ý nghĩa không nên bỏ qua',
+          infor: 'Top 5 món quà tặng bạn gái cực kỳ ý nghĩa không nên bỏ qua'
         },
         third: {
           id: 3,
