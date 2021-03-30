@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+      <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400&display=swap" rel="stylesheet">
+      <!-- Style Sheet -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+  <div class="heading">
+    <p>Are Yor Ready We're Coming Soon With</p>
+    <h2>Online Web Course's</h2>
+  </div>
+  
+  <div class="timer">
+    <p id="day"></p>
+    <h6>days</h6>
+  </div>
+
+  <div class="timer">
+    <p id="hour"></p>
+    <h6>hours</h6>
+  </div>
+
+  <div class="timer">
+    <p id="minute"></p>
+    <h6>minutes</h6>
+  </div>
+  <div class="timer">
+    <p id="second"></p>
+    <h6>seconds</h6>
+  </div>
+
+<script>
+  
+  var countDownDate = new Date("May 24, 2020 01:08:25").getTime();
+  var x = setInterval(function() {
+
+  var now = new Date().getTime();
+  var distance = countDownDate - now;
+
+
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  
+  document.getElementById("day").innerHTML = days;
+  document.getElementById("hour").innerHTML = hours;
+  document.getElementById("minute").innerHTML = minutes;
+  document.getElementById("second").innerHTML = seconds;
+  });
+
+</script>
+</body>
+</html>
