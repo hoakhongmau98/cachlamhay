@@ -1,0 +1,28 @@
+#buttonSocialYoutube{
+    color: white;
+    background-color: #222222;
+  }
+  #buttonSocialFacebook{
+    color: white;
+    background-color: #222222;
+  }
+  
+  #buttonSocialFacebook:hover{
+    background-color: #4867AA;
+  }
+  
+  .buttonSocialFacebook:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+  
+  #buttonSocialYoutube:hover{
+    background-color: #F40103
+  }
+  
+  .buttonSocialYoutube:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
